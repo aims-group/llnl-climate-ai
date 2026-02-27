@@ -6,8 +6,8 @@ This repository provides practical documentation for using AI responsibly and ef
 
 ## Getting Started
 
-- AI tools overview: `docs/ai-tools-overview.md`
-- Claude Code + LivAI setup (macOS): `docs/claude-code-livai-macos.md`
+- Getting Started: `docs/getting-stared.md`
+- Claude Code + LivAI setup (macOS): `docs/claude-code-livai-api/setup_macos.md`
 
 ## Scope
 
