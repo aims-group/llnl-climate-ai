@@ -78,13 +78,7 @@ You will use this token in the next step.
 
 ### Step 1 - Create Your Claude LivAI API Config File
 
-Create a Claude-specific environment file:
-
-```bash
-touch ~/.livai_claude.env
-```
-
-Add the following:
+Create a Claude-specific environment file with:
 
 ```bash
 cat <<'EOF' > ~/.livai_claude.env
