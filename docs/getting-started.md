@@ -125,8 +125,10 @@ LLNL note: Access via LivAI API (lab-provided).
 Setup instructions:
 See the **Getting Started guide in this repository**:
 
-```
 docs/claude-code-livai-macos.md
+
+```
+docs/claude-code/liveai-api-setup-macos.md
 ```
 
 ### 3. Design, Documentation & Scientific Reasoning
@@ -176,8 +178,10 @@ When:
 
 For Claude CLI setup with LivAI, see:
 
-```
 docs/claude-code-livai-macos.md
+
+```
+docs/claude-code/liveai-api-setup-macos.md
 ```
 
 ### Additional Tools (Not LLNL-Provisioned)
