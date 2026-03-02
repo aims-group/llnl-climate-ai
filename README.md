@@ -4,11 +4,6 @@ AI tools and guidance for climate software engineering at LLNL.
 
 This repository provides practical documentation for using AI responsibly and effectively in Earth system modeling, diagnostics, HPC workflows, and climate data analysis.
 
-## Getting Started
-
-- Getting Started: `docs/getting-stared.md`
-- Claude Code + LivAI setup (macOS): `docs/claude-code-livai-api/setup_macos.md`
-
 ## Scope
 
 - AI-assisted software engineering
