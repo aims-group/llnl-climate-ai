@@ -91,6 +91,8 @@ LivAI provides API access to multiple commercial models (e.g., OpenAI and Anthro
 - ⚠️ Internet-style models (not domain-specialized)
 - ⚠️ Cannot run fully offline (requires LLNL network access/VPN)
 
+> ℹ️ **Note:** The LivAI API is only accessible from within the LLNL lab network (including VPN). All requests are made to an internal API service. Attempting to use LivAI credentials from outside the lab network (such as remote SSH sessions or from other sites) will not work.
+
 ### 2. Livermore Computing LLamaMe
 
 **What it is:**
