@@ -19,6 +19,8 @@
 - [Troubleshooting](#troubleshooting)
 - [Security Notes](#security-notes)
 
+> ℹ️ **Note:** The LivAI API is only accessible from within the LLNL lab network (including VPN). All requests are made to an internal API service. Attempting to use LivAI credentials from outside the lab network (such as remote SSH sessions or from other sites) will not work.
+
 ## Overview
 
 This guide configures Claude Code to:
