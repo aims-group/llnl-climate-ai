@@ -12,16 +12,32 @@ specific frameworks or technologies unless they clearly exist in the repository.
 
 Create the following files:
 
+Root instruction files:
+
 1. AGENTS.md
 2. CLAUDE.md
-3. .github/copilot-instructions.md
-4. PLANNING.md
-5. IMPLEMENTATION.md
+3. PLANNING.md
+4. IMPLEMENTATION.md
+
+GitHub agent adapter:
+
+5. .github/copilot-instructions.md
+
+Reusable AI templates:
+
+6. docs/ai/planning_template.md
+7. docs/ai/implementation_template.md
 
 AGENTS.md must be the canonical source of truth.
 
 Other files should reference AGENTS.md where appropriate and avoid
 duplicating repository rules.
+
+Templates inside `docs/ai/` are reusable references and must not be
+modified by automated agents.
+
+PLANNING.md and IMPLEMENTATION.md are working documents that may be
+updated by agents during tasks.
 
 ---
 
@@ -56,7 +72,7 @@ Agents must create a plan before implementing any changes.
 
 Implementation should not begin until a plan has been written.
 
-The plan should follow the structure defined in PLANNING.md.
+The plan should follow the structure defined in `docs/ai/planning_template.md`.
 
 Agents must follow this workflow:
 
@@ -106,6 +122,21 @@ Agents should:
 - prefer minimal and focused modifications
 - avoid unnecessary dependencies
 - avoid introducing breaking changes unless explicitly requested
+
+## Planning and Implementation Templates
+
+Reusable templates are located in:
+
+docs/ai/
+
+Agents must:
+
+- use `docs/ai/planning_template.md` when creating plans
+- use `docs/ai/implementation_template.md` when documenting implementations
+- write the active task plan to `PLANNING.md`
+- write implementation summaries to `IMPLEMENTATION.md`
+
+Agents must not modify files inside `docs/ai/`.
 
 ## Testing and Validation
 
@@ -163,28 +194,46 @@ This file should:
 
 # PLANNING.md Requirements
 
-PLANNING.md should define how agents create structured plans.
+PLANNING.md is the working planning document for the current task.
 
-Include sections such as:
+Agents should structure plans according to the template in:
 
-- Task description
-- Background or context
-- Goals
-- Constraints
-- Relevant files or components
-- Step-by-step implementation plan
-- Risks or edge cases
-- Verification strategy
+docs/ai/planning_template.md
 
-This file is intended to guide structured planning before coding begins.
+PLANNING.md may be updated during tasks.
 
 ---
 
 # IMPLEMENTATION.md Requirements
 
-IMPLEMENTATION.md should define how agents implement a planned change.
+IMPLEMENTATION.md is the working implementation record for the current task.
 
-Include sections such as:
+Agents should structure implementation notes according to:
+
+docs/ai/implementation_template.md
+
+IMPLEMENTATION.md may be updated during tasks.
+
+---
+
+# docs/ai Template Requirements
+
+## planning_template.md
+
+This file should contain a reusable planning template including sections such as:
+
+- Task
+- Background
+- Goals
+- Constraints
+- Relevant files
+- Step-by-step implementation plan
+- Risks or edge cases
+- Verification strategy
+
+## implementation_template.md
+
+This file should contain a reusable implementation template including sections such as:
 
 - Task summary
 - Approved plan
@@ -193,7 +242,7 @@ Include sections such as:
 - Validation steps
 - Notes or assumptions
 
-This file helps agents structure implementation work and document results.
+These templates must be general and reusable across tasks.
 
 ---
 
@@ -214,4 +263,10 @@ Return the generated files using the following format.
 <content>
 
 ### File: IMPLEMENTATION.md
+<content>
+
+### File: docs/ai/planning_template.md
+<content>
+
+### File: docs/ai/implementation_template.md
 <content>
