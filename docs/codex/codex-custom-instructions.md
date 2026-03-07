@@ -1,3 +1,33 @@
+# Codex Custom Instructions
+
+These instructions configure Codex to behave like a careful, repository-aware software engineer. They emphasize correctness, minimal diffs, and avoiding speculative APIs.
+
+## Recommended Settings
+
+Set **Personality** to **Pragmatic**.  
+This reduces verbosity and encourages direct, implementation-focused responses.
+
+## How to Add These Instructions
+
+### Codex Web
+
+1. Open Codex.
+2. Go to **Settings → General**.
+3. Find **Custom Instructions**.
+4. Paste the instructions below.
+5. Save.
+
+### Codex Desktop App
+
+1. Open the Codex app.
+2. Go to **Settings → Personalization**.
+3. Locate **Custom Instructions**.
+4. Paste the instructions below.
+5. Save.
+
+## Instructions
+
+```markdown
 # Codex Engineering Behavior Instructions
 
 Respond as a senior software engineer working inside an existing codebase.
