@@ -39,10 +39,19 @@ Templates inside `docs/ai/` are reusable references and must not be
 modified by automated agents.
 
 PLANNING.md and IMPLEMENTATION.md are working documents that may be
-updated by agents during tasks.
+updated by agents during tasks but must be treated as **local artifacts only**.
 
-PLANNING.md and IMPLEMENTATION.md should be treated as local working
-artifacts and typically gitignored to avoid merge conflicts or stale plans.
+These files must be **strictly gitignored** and must never be committed
+to the repository.
+
+Add the following entries to `.gitignore`:
+
+```
+PLANNING.md
+IMPLEMENTATION.md
+```
+
+If these files were previously tracked, remove them from the repository index.
 
 ---
 
@@ -91,6 +100,9 @@ Typical workflow for non-trivial changes:
 
 If operating in an interactive environment, agents should present the
 plan first and wait for confirmation before implementing.
+
+Plans should be written to `PLANNING.md`, which is a **local artifact**
+and must not be committed.
 
 ---
 
@@ -169,13 +181,15 @@ Agents must:
 
 - use `docs/ai/planning_template.md` when creating plans
 - use `docs/ai/implementation_template.md` when documenting implementations
-- write the active task plan to `PLANNING.md`
-- write implementation summaries to `IMPLEMENTATION.md`
+
+Agents may write temporary planning or implementation notes to:
+
+- `PLANNING.md`
+- `IMPLEMENTATION.md`
+
+These files are **local working artifacts** and must never be committed.
 
 Agents must not modify files inside `docs/ai/`.
-
-PLANNING.md and IMPLEMENTATION.md are working artifacts and should
-generally be gitignored.
 
 ## Testing and Validation
 
@@ -239,7 +253,8 @@ Agents should structure plans according to the template in:
 
 docs/ai/planning_template.md
 
-PLANNING.md may be updated during tasks and should generally be gitignored.
+This file is a **local artifact**, must be gitignored, and must never
+be committed.
 
 ---
 
@@ -251,7 +266,8 @@ Agents should structure implementation notes according to:
 
 docs/ai/implementation_template.md
 
-IMPLEMENTATION.md may be updated during tasks and should generally be gitignored.
+This file is a **local artifact**, must be gitignored, and must never
+be committed.
 
 ---
 
