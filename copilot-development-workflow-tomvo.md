@@ -30,9 +30,7 @@ GitHub Issues act as the orchestration layer for AI-assisted development, while 
 
 ## Accounts
 
-This workflow assumes access to:
-
-- **GitHub Copilot Business**
+This workflow assumes access to a **GitHub Copilot** subscription.
 
 This enables:
 
