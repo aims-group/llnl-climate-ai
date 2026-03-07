@@ -2,7 +2,7 @@
 
 _Last updated: March 7, 2026_
 
-This document describes an AI-assisted development workflow using **GitHub Copilot** and GitHub-native tooling.
+This document describes an AI-assisted development workflow built around **GitHub Copilot** and GitHub-native tooling.
 
 The workflow follows a simple **agentic development loop**:
 
