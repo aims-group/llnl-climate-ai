@@ -2,7 +2,7 @@
 
 _Last updated: March 7, 2026_
 
-This document describes an AI-assisted development workflow built around **GitHub Copilot** and GitHub-native tooling.
+This document describes an AI-assisted development workflow built around **[GitHub Copilot](https://github.com/features/copilot)** and GitHub-native tooling.
 
 The workflow follows a simple **agentic development loop**:
 
@@ -30,7 +30,7 @@ GitHub Issues act as the orchestration layer for AI-assisted development, while 
 
 ## Accounts
 
-This workflow assumes access to a **GitHub Copilot** subscription.
+This workflow assumes access to a **[GitHub Copilot](https://github.com/features/copilot)** subscription.
 
 This enables:
 
@@ -43,11 +43,11 @@ This enables:
 
 | Tool | Role |
 |-----|-----|
-| GitHub | Issues, pull requests, and collaboration |
-| GitHub Copilot | Planning assistance, code generation, and coding agents |
-| Visual Studio Code | Primary development environment |
+| [GitHub](https://github.com) | Issues, pull requests, and collaboration |
+| [GitHub Copilot](https://github.com/features/copilot) | Planning assistance, code generation, and coding agents |
+| [Visual Studio Code](https://code.visualstudio.com) | Primary development environment |
 
-Copilot functionality in **Visual Studio Code** is provided through the **GitHub Copilot extension**.
+Copilot functionality in **[Visual Studio Code](https://code.visualstudio.com)** is provided through the **[GitHub Copilot extension](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)**.
 
 ## Development Workflow
 
@@ -62,8 +62,11 @@ Planning is performed using **Copilot Chat in VS Code or GitHub** so the AI has 
 
 Typical process:
 
-1. Draft a task specification using the planning prompt template: [AI development task template](../prompts/ai-development-task-template.md)
+1. Draft a task specification using the planning prompt template:  
+   [AI development task template](../prompts/ai-development-task-template.md)
+
 2. Use Copilot Chat to refine the task.
+
 3. Create a GitHub Issue describing the task.
 
 Issues serve as structured prompts for coding agents.
@@ -113,7 +116,7 @@ flowchart TD
 
 For day-to-day development:
 
-1. Open the repository in **Visual Studio Code**.
+1. Open the repository in **[Visual Studio Code](https://code.visualstudio.com)**.
 2. Use Copilot suggestions for implementation.
 3. Run tests locally.
 4. Commit and push changes.
