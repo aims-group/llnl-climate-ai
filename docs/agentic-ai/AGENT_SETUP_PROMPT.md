@@ -1,3 +1,5 @@
+# AI Agent Instruction File Generation Prompt
+
 Analyze this repository and generate AI agent instruction files.
 
 The repository should support multiple coding agents while maintaining
@@ -10,23 +12,23 @@ specific frameworks or technologies unless they clearly exist in the repository.
 
 # Files to Generate
 
-Create the following files:
+Create the following files.
 
-Root instruction files:
+## Root Instruction Files
 
-1. AGENTS.md
-2. CLAUDE.md
-3. PLANNING.md
-4. IMPLEMENTATION.md
+1. AGENTS.md  
+2. CLAUDE.md  
+3. PLANNING.md  
+4. IMPLEMENTATION.md  
 
-GitHub agent adapter:
+## GitHub Agent Adapter
 
 5. .github/copilot-instructions.md
 
-Reusable AI templates:
+## Reusable AI Templates
 
-6. docs/ai/planning_template.md
-7. docs/ai/implementation_template.md
+6. docs/ai/planning_template.md  
+7. docs/ai/implementation_template.md  
 
 AGENTS.md must be the canonical source of truth.
 
@@ -38,6 +40,10 @@ modified by automated agents.
 
 PLANNING.md and IMPLEMENTATION.md are working documents that may be
 updated by agents during tasks.
+
+PLANNING.md and IMPLEMENTATION.md should be treated as **local working artifacts**
+and should not be committed to version control. They are typically gitignored
+to avoid merge conflicts and stale task documentation.
 
 ---
 
@@ -138,6 +144,9 @@ Agents must:
 
 Agents must not modify files inside `docs/ai/`.
 
+PLANNING.md and IMPLEMENTATION.md are local working documents and should not
+be committed to version control.
+
 ## Testing and Validation
 
 Agents should:
@@ -202,6 +211,9 @@ docs/ai/planning_template.md
 
 PLANNING.md may be updated during tasks.
 
+This file should be considered a local artifact and should typically be
+gitignored.
+
 ---
 
 # IMPLEMENTATION.md Requirements
@@ -213,6 +225,9 @@ Agents should structure implementation notes according to:
 docs/ai/implementation_template.md
 
 IMPLEMENTATION.md may be updated during tasks.
+
+This file should be considered a local artifact and should typically be
+gitignored.
 
 ---
 
