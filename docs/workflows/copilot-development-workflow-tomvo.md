@@ -62,11 +62,8 @@ Planning is performed using **Copilot Chat in VS Code or GitHub** so the AI has 
 
 Typical process:
 
-1. Draft a task specification using the planning prompt template:  
-   [AI development task template](../prompts/ai-development-task-template.md)
-
+1. Draft a task specification using the planning prompt template: [AI development task template](../prompts/ai-development-task-template.md)
 2. Use Copilot Chat to refine the task.
-
 3. Create a GitHub Issue describing the task.
 
 Issues serve as structured prompts for coding agents.
