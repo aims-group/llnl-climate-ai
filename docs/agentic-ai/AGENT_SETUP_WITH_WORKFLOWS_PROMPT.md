@@ -314,12 +314,6 @@ Return the generated files using the following format.
 ### File: .github/copilot-instructions.md
 <content>
 
-### File: PLANNING.md
-<content>
-
-### File: IMPLEMENTATION.md
-<content>
-
 ### File: docs/ai/planning_template.md
 <content>
 
