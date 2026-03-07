@@ -41,9 +41,8 @@ modified by automated agents.
 PLANNING.md and IMPLEMENTATION.md are working documents that may be
 updated by agents during tasks.
 
-PLANNING.md and IMPLEMENTATION.md should be treated as **local working artifacts**
-and should not be committed to version control. They are typically gitignored
-to avoid merge conflicts and stale task documentation.
+PLANNING.md and IMPLEMENTATION.md should be treated as local working
+artifacts and typically gitignored to avoid merge conflicts or stale plans.
 
 ---
 
@@ -72,15 +71,15 @@ Prefer instructions that remain valid even as the repository evolves.
 
 ---
 
-# Mandatory Planning Requirement
+# Planning Workflow
 
-Agents must create a plan before implementing any changes.
+Agents should prefer structured planning for non-trivial changes.
 
-Implementation should not begin until a plan has been written.
+The plan should follow the structure defined in:
 
-The plan should follow the structure defined in `docs/ai/planning_template.md`.
+docs/ai/planning_template.md
 
-Agents must follow this workflow:
+Typical workflow for non-trivial changes:
 
 1. Understand the task
 2. Identify relevant files
@@ -90,10 +89,40 @@ Agents must follow this workflow:
 6. Validate the result
 7. Summarize modifications
 
-Agents should not skip the planning phase unless the task is extremely small.
-
 If operating in an interactive environment, agents should present the
 plan first and wait for confirmation before implementing.
+
+---
+
+# Lightweight Workflow for Small Changes
+
+Planning and implementation templates are not required for trivial tasks.
+
+Agents may skip `PLANNING.md` and `IMPLEMENTATION.md` if the change meets
+all of the following criteria:
+
+- modifies only a small number of files (typically 1–2)
+- involves a limited number of lines changed
+- does not alter architecture or system design
+- does not introduce new dependencies
+- does not modify public APIs, schemas, or interfaces
+
+Examples of trivial changes:
+
+- documentation edits
+- typo fixes
+- formatting or lint fixes
+- small bug fixes
+- minor refactors confined to a single file
+
+For these cases agents should:
+
+1. Make the minimal change required.
+2. Verify the change does not break existing functionality.
+3. Provide a short explanation in the pull request description.
+
+For larger or more complex changes, agents should follow the full
+planning and implementation workflow.
 
 ---
 
@@ -117,7 +146,8 @@ Avoid framework assumptions unless clearly present.
 
 Explain how agents should approach tasks.
 
-Include the required planning-before-implementation workflow.
+Include both the lightweight workflow for small changes and the
+planning-based workflow for larger changes.
 
 ## Coding Expectations
 
@@ -144,8 +174,8 @@ Agents must:
 
 Agents must not modify files inside `docs/ai/`.
 
-PLANNING.md and IMPLEMENTATION.md are local working documents and should not
-be committed to version control.
+PLANNING.md and IMPLEMENTATION.md are working artifacts and should
+generally be gitignored.
 
 ## Testing and Validation
 
@@ -209,10 +239,7 @@ Agents should structure plans according to the template in:
 
 docs/ai/planning_template.md
 
-PLANNING.md may be updated during tasks.
-
-This file should be considered a local artifact and should typically be
-gitignored.
+PLANNING.md may be updated during tasks and should generally be gitignored.
 
 ---
 
@@ -224,10 +251,7 @@ Agents should structure implementation notes according to:
 
 docs/ai/implementation_template.md
 
-IMPLEMENTATION.md may be updated during tasks.
-
-This file should be considered a local artifact and should typically be
-gitignored.
+IMPLEMENTATION.md may be updated during tasks and should generally be gitignored.
 
 ---
 
