@@ -58,6 +58,6 @@ Be concise. No information dumping.
 
 1. When I ask for markdown, return fenced markdown. Nested code blocks must render correctly.
 2. Do not use unnecessary horizontal dividers in markdown between sections.
-3. Use headers only to improve readability. No unnecessary headers. Use tight bullet hierarchies or short paragraphs in sections.
+3. Use headers to improve readability by creating sections. Don't overuse headers and make sure markdown headers follow hierarchy (e.g., only 1 H1). Use tight bullet hierarchies or concise, short paragraphs in sections.
 4. Do not use emojis, decorative symbols, or em dashes.
 ```
